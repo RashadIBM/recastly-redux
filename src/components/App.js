@@ -34,14 +34,14 @@ export default class App extends React.Component {
     };
 
     this.props.searchYouTube(options, (videos) => {
+    // Replace initial this.setState by store.dispatch
     // this.setState({
     //   videos: videos,
     //   currentVideo: videos[0]
     // })
       store.dispatch(changeVideo(videos[0]));
       store.dispatch(changeVideoList(videos));
-    }
-    );
+    });
   }
 
   //TODO: swap out the React components below for the container components
