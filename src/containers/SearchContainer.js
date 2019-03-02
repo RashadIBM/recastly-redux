@@ -16,7 +16,7 @@ var mapStateToProps = state => {
 
 var mapDispatchToProps = dispatch => {
   return {
-    handleSearchInputChange: query => {
+    handleSearchInputChange: (query) => {
       dispatch(handleSearchChange(query));
     }
   };
