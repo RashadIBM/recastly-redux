@@ -24,7 +24,7 @@ export default class App extends React.Component {
   }
 
   handleVideoListEntryTitleClick(video) {
-    this.setState({currentVideo: video});
+    this.setState({ currentVideo: video });
   }
 
   getYouTubeVideos(query) {
@@ -33,11 +33,14 @@ export default class App extends React.Component {
       query: query
     };
 
-    this.props.searchYouTube(options, (videos) =>
-      this.setState({
-        videos: videos,
-        currentVideo: videos[0]
-      })
+    this.props.searchYouTube(options, (videos) => {
+    // this.setState({
+    //   videos: videos,
+    //   currentVideo: videos[0]
+    // })
+      store.dispatch(changeVideo(videos[0]));
+      store.dispatch(changeVideoList(videos));
+    }
     );
   }
 
@@ -46,7 +49,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Nav handleSearchInputChange={this.getYouTubeVideos.bind(this)}/>
+        <Nav handleSearchInputChange={this.getYouTubeVideos.bind(this)} />
         <div className="row">
           <div className="col-md-7">
             {/* <VideoPlayer video={this.state.currentVideo}/> */}
