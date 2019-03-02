@@ -4,8 +4,9 @@ import changeVideo from './../actions/currentVideo.js';
 
 var mapStateToProps = (state) => {
   return {
-    videos: state.videoList,
-    currentVideo: state.currentVideo
+    videos: state.videoList
+    // ,
+    // currentVideo: state.currentVideo
   };
 };
 
