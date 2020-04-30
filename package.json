@@ -19,7 +19,7 @@
     "diff": "^4.0.1",
     "enzyme-redux": "^0.1.7",
     "growl": "^1.10.5",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lodash": "^4.17.15",
     "lodash.merge": "^4.6.2",
     "popper.js": "^1.12.9",
